@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
-{
-    
-    private float bound = -20;
+{  
+
+    private float bound = -25;
+    private float botBound = -10;
 
     void Update()
     {
@@ -15,6 +16,12 @@ public class DestroyOutOfBounds : MonoBehaviour
             Destroy(gameObject);
 
         }
-
+        
+        if (transform.position.y < botBound) {
+       
+            Destroy(gameObject);
+            Debug.Log("Game Over!");
+        
+        }
     }
 }

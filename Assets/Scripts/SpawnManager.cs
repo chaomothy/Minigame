@@ -20,11 +20,6 @@ public class SpawnManager : MonoBehaviour
     
     }
 
-    void Update()
-    {
-
-    }
-
     void SpawnObstacles() {
     
         int obstacleIndex = Random.Range(0, obstaclePrefabs.Length);
